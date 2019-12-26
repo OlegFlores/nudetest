@@ -1,6 +1,6 @@
 {
   "name": "@oyflores/nudetest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The easiest unit-test lib in the world.",
   "main": "index.js",
   "scripts": {

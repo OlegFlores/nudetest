@@ -19,7 +19,9 @@ const makePromise = (testName, fn) => {
   try {
     const res = fn();
     if(res && res.then) {
-      return res.catch((reason) => {
+      return res.then(resOfPromise => {
+        return Promise.resolve({testName: testName, passed: true, result: resOfPromise});
+      }, (reason) => {
         return Promise.resolve({testName: testName, passed: false,  reason: reason, sync: false});
       });
     } else {
