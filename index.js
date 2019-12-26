@@ -35,7 +35,8 @@ const printResults = (testResults) => {
     if(testResult.passed) {
       console.log('✅', testResult.testName)
     } else {
-      console.log('❌', testResult.testName, testResult.sync ? '' : ' - error in synchronous code -');
+      console.log('❌', testResult.testName, !testResult.sync ? '' : ' - error in synchronous code -');
+      console.error(testResult.reason);
     }
   });
   return testResults;
