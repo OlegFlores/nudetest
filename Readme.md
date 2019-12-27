@@ -1,7 +1,12 @@
+To install run:
+```shell script
+npm install @oyflores/nudetest
+```
+
 To use run:
 
 ```shell script
-node ./node_modules/nudetest my-test.js
+node ./node_modules/@oyflores/nudetest my-test.js
 ```
 where my-test.js could be like this:
 
